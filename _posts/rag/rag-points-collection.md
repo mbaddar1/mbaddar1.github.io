@@ -28,5 +28,15 @@
      - https://huggingface.co/learn/cookbook/en/rag_evaluation
    - Cross attention to make sure that most relevant pieces of information are emphasized during generation
      - https://www.geeksforgeeks.org/nlp/cross-attention-mechanism-in-transformers/
-     - 
+   
+### Generation
+- T5 https://www.geeksforgeeks.org/nlp/t5-text-to-text-transfer-transformer/
+- BART https://www.geeksforgeeks.org/artificial-intelligence/bart-model-for-text-auto-completion-in-nlp/
+- Integrate retriever and generation pipeline 
+- https://arxiv.org/abs/2002.08909
+### Improvements 
+- semantic cache https://huggingface.co/learn/cookbook/en/semantic_cache_chroma_vector_database 
+- FAISS https://medium.com/@yashpaliwal42/simple-rag-retrieval-augmented-generation-implementation-using-faiss-and-openai-2a74775b17c3 
+
+
    
