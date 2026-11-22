@@ -1,3 +1,11 @@
+---
+title: "RAG: Points Collection"
+categories:
+  - Generative AI
+tags:
+  - rag
+---
+
 # Notes
 1. Diagram of query,controller, retriever, Generator 
 2. What is RAG and what it does

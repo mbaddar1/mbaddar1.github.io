@@ -1,27 +1,54 @@
-# Minimal Mistakes remote theme starter
+# mbaddar1.github.io
 
-Click [**Use this template**](https://github.com/mmistakes/mm-github-pages-starter/generate) button above for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
+My personal site: notes, experiments, and things I'm learning in AI and machine learning.
+Live at https://mbaddar1.github.io. It's built with [Jekyll](https://jekyllrb.com/) and the
+[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) theme, and GitHub Pages
+rebuilds it automatically whenever something is pushed to `main`.
 
-Contains basic configuration to get you a site with:
+## Writing
 
-- Sample posts.
-- Sample top navigation.
-- Sample author sidebar with social links.
-- Sample footer links.
-- Paginated home page.
-- Archive pages for posts grouped by year, category, and tag.
-- Sample about page.
-- Sample 404 page.
-- Site wide search.
+- **Drafts** go in `_drafts/` with no date in the file name, e.g. `_drafts/my-idea.md`.
+  They are not published.
+- **Publishing** means moving a draft into `_posts/` with a date prefix, for example
+  `_posts/2026-11-22-my-idea.md`, then pushing to `main`.
+- Every post starts with front matter:
 
-Replace sample content with your own and [configure as necessary](https://mmistakes.github.io/minimal-mistakes/docs/configuration/).
+  ```yaml
+  ---
+  title: "My Idea"
+  categories:
+    - RAG
+  tags:
+    - retrieval
+  ---
+  ```
 
----
+## Preview locally (Ubuntu)
 
-## Troubleshooting
+One-time setup. This installs Ruby with apt (it asks for your sudo password) and puts the
+site's gems in `vendor/bundle`:
 
-If you have a question about using Jekyll, start a discussion on the [Jekyll Forum](https://talk.jekyllrb.com/) or [StackOverflow](https://stackoverflow.com/questions/tagged/jekyll). Other resources:
+```bash
+./scripts/setup-ubuntu.sh
+```
 
-- [Ruby 101](https://jekyllrb.com/docs/ruby-101/)
-- [Setting up a Jekyll site with GitHub Pages](https://jekyllrb.com/docs/github-pages/)
-- [Configuring GitHub Metadata](https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration) to work properly when developing locally and avoid `No GitHub API authentication could be found. Some fields may be missing or have incorrect data.` warnings.
+Then, whenever you want to preview the site:
+
+```bash
+bundle exec jekyll serve --drafts --livereload
+```
+
+Open http://localhost:4000. Drafts appear because of `--drafts`, and the page reloads
+when you save a file. Changes to `_config.yml` need a server restart.
+
+## Layout
+
+| Path | What it is |
+| --- | --- |
+| `_config.yml` | Site settings: title, author, sidebar, theme |
+| `index.md` | Home page (latest posts) |
+| `_pages/` | About, archive pages, 404 |
+| `_data/navigation.yml` | Top menu |
+| `_posts/` | Published posts |
+| `_drafts/` | Unpublished notes |
+| `assets/images/` | Images |
