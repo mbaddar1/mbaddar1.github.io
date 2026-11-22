@@ -1,13 +1,13 @@
 ---
-title: "Post: Modified Date"
-last_modified_at: 2016-03-09T16:20:02-05:00
+title: "Transformers: A Simple Brain Dump"
 categories:
-  - Blog
+  - Transformers and AI Core
 tags:
-  - Post Formats
-  - readability
-  - standard
+  - transformers
+  - attention
+  - embeddings
 ---
+
 ## Points 
 1. Why Large attention matrices cause performance issues and how to mitigate
 [1] P2 side-point 5
