@@ -1,7 +1,9 @@
 {% comment %}
   Email link, kept out of the HTML source so spam bots that scrape pages
   can't harvest it. The address is stored reversed and base64-encoded and is
-  only assembled in the visitor's browser by the script below.
+  only decoded in the visitor's browser when they click "Email": the label is
+  then replaced by the address and the address is copied to the clipboard.
+  It doesn't open a mail app, since many visitors don't have one set up.
   To change it, run:  printf '%s' 'you@example.com' | rev | base64
 {% endcomment %}
 <li>
@@ -11,6 +13,17 @@
 </li>
 <script>
   document.querySelectorAll('.js-email').forEach(function (a) {
-    a.href = 'mailto:' + atob(a.dataset.e).split('').reverse().join('');
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      var addr = atob(a.dataset.e).split('').reverse().join('');
+      var label = a.querySelector('.label');
+      label.textContent = addr;
+      label.style.userSelect = 'all';
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(addr).then(function () {
+          a.title = 'Copied to clipboard';
+        }, function () {});
+      }
+    });
   });
 </script>
