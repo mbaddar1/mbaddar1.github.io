@@ -16,8 +16,7 @@
 title: Mohamed Baddar
 email:
 description: >- # this means to ignore newlines until "baseurl:"
-  AI and machine learning engineer working on search, ranking, and practical
-  machine learning systems.
+  AI/ML Engineer working on Generative AI Systems, Semantic Search and Ranking, and other systems based on AI/ML
 github_username: mbaddar1
 minimal_mistakes_skin: default
 search: true
@@ -57,7 +56,7 @@ plugins:
 author:
   name   : "Mohamed Baddar"
   avatar : "/assets/images/profile.jpg"
-  bio    : "AI and machine learning engineer working on search, ranking, and practical ML systems."
+  bio    : "AI/ML Engineer working on Generative AI Systems, Semantic Search and Ranking, and other systems based on AI/ML"
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
